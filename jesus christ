@@ -1,0 +1,27 @@
+import math
+minLength = int(input("Hey, enter a number: "))
+
+print(int(math.sqrt(minLength)))
+
+maxLength = int(input("Enter another number for a chance to activate a new game: "))
+
+n = 10
+b = 50
+
+if minLength <= n or maxLength >= b:
+    print("Welcome to the Matrix")
+    arr = []
+
+    for i in range (1, minLength):
+        arr.append(i)
+        print(arr)
+        print("Follow the values")
+    import random as matrix
+    shuffled_list = sorted(arr, key=lambda x: matrix.random())
+    print(shuffled_list)
+    print(n)
+    ans = input("What is the placement value of the number in the Matrix that matches with the number after it?")
+    if ans == "nothing" or ans == "none":
+        print("You have completed the Matrix. Goodbye...")
+    else:
+        train = input("You have failed the Matrix, would you like to try again?\n")
